@@ -38,7 +38,7 @@ y = data.iloc[:,-1]          # Target - Last Column
 print(X)
 from sklearn.model_selection import train_test_split
 import pickle
-from sklearn.ensemble import AdaBoostRegressor
+from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=0)
 
@@ -48,7 +48,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random
 # Split the data
 
 # Initialize and train the AdaBoostRegressor
-model = AdaBoostRegressor(learning_rate=0.5, n_estimators=100)
+model = GradientBoostingRegressor(learning_rate=0.5, n_estimators=100)
 model.fit(X_train, y_train)
 
 st.sidebar.header('Specify Input Parameters')
