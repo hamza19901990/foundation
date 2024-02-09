@@ -53,20 +53,20 @@ model.fit(X_train, y_train)
 
 st.sidebar.header('Specify Input Parameters')
 def get_input_features():
-    B = st.sidebar.slider('B(m)', 0.03,3.02,0.05)
-    D = st.sidebar.slider('D(m)',0.00,0.89,0.50)
+    B = st.sidebar.slider('B', 0.03,3.02,0.05)
+    D = st.sidebar.slider('D',0.00,0.89,0.50)
     LoverB = st.sidebar.slider('L/B', 1.00,6.00,3.00)
-    angle = st.sidebar.slider('angle (degree)', 31.95,45.70,33.00)
+    angle = st.sidebar.slider('angle', 31.95,45.70,33.00)
     unit_weight  = st.sidebar.slider('unit_weight', 9.85,20.80,20.60)
 
 
 
 
 
-    data_user = {'B(m)': B(m),
-            'D(m)': D(m),
+    data_user = {'B': B,
+            'D': D,
             'L/B': L/B,
-            'angle (degree)': angle (degree),
+            'angle': angle,
             'unit_weight': unit_weight,
 
     }
