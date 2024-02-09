@@ -19,8 +19,7 @@ image=Image.open(r'foundation.jpg')
 st.image(image, use_column_width=True)
 
 data = pd.read_csv(r"foundation1.csv")
-
-req_col_names = ["B", "D", "LoverB", "angle","unit_weight","qu"]
+req_col_names = ["B", "D", "LoverB", "gamma","degree","qu"]
 curr_col_names = list(data.columns)
 
 mapper = {}
@@ -50,14 +49,13 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random
 # Initialize and train the AdaBoostRegressor
 model = GradientBoostingRegressor(learning_rate=0.5, n_estimators=100)
 model.fit(X_train, y_train)
-
 st.sidebar.header('Specify Input Parameters')
 def get_input_features():
     B = st.sidebar.slider('B', 0.03,3.02,0.05)
     D = st.sidebar.slider('D',0.00,0.89,0.50)
     LoverB = st.sidebar.slider('LoverB', 1.00,6.00,3.00)
-    angle = st.sidebar.slider('angle', 31.95,45.70,33.00)
-    unit_weight  = st.sidebar.slider('unit_weight', 9.85,20.80,20.60)
+    gamma = st.sidebar.slider('gamma', 31.95,45.70,33.00)
+    degree  = st.sidebar.slider('degree', 9.85,20.80,20.60)
 
 
 
@@ -66,8 +64,8 @@ def get_input_features():
     data_user = {'B': B,
             'D': D,
             'LoverB': LoverB,
-            'angle': angle,
-            'unit_weight': unit_weight,
+            'gamma': gamma,
+            'degree': degree,
 
     }
     features = pd.DataFrame(data_user, index=[0])
