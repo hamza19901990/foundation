@@ -19,7 +19,7 @@ image=Image.open(r'foundation.jpg')
 st.image(image, use_column_width=True)
 
 data = pd.read_csv(r"foundation1.csv")
-req_col_names = ["B", "D", "LoverB", "ga","degree","qu"]
+req_col_names = ["B", "D", "LoverB", "gamma","degree","qu"]
 curr_col_names = list(data.columns)
 
 mapper = {}
@@ -54,7 +54,7 @@ def get_input_features():
     B = st.sidebar.slider('B', 0.03,3.02,0.05)
     D = st.sidebar.slider('D',0.00,0.89,0.50)
     LoverB = st.sidebar.slider('LoverB', 1.00,6.00,3.00)
-    ga = st.sidebar.slider('ga', 31.95,45.70,33.00)
+    gamma = st.sidebar.slider('gamma', 31.95,45.70,33.00)
     degree  = st.sidebar.slider('degree', 9.85,20.80,20.60)
 
 
@@ -64,7 +64,7 @@ def get_input_features():
     data_user = {'B': B,
             'D': D,
             'LoverB': LoverB,
-            'ga': ga,
+            'gamma': gamma,
             'degree': degree,
 
     }
