@@ -57,7 +57,7 @@ def get_input_features():
     D = st.sidebar.slider('D(m)',0.00,0.89,0.50)
     LoverB = st.sidebar.slider('L/B', 1.00,6.00,3.00)
     angle = st.sidebar.slider('angle (degree)', 31.95,45.70,33.00)
-    unit_weight  = st.sidebar.slider('unit weight (kN/m3)', 9.85,20.80,20.60)
+    unit_weight  = st.sidebar.slider('unit_weight', 9.85,20.80,20.60)
 
 
 
@@ -67,7 +67,7 @@ def get_input_features():
             'D(m)': D(m),
             'L/B': L/B,
             'angle (degree)': angle (degree),
-            'unit weight (kN/m3)': unit weight (kN/m3),
+            'unit_weight': unit_weight,
 
     }
     features = pd.DataFrame(data_user, index=[0])
