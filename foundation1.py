@@ -55,7 +55,7 @@ st.sidebar.header('Specify Input Parameters')
 def get_input_features():
     B = st.sidebar.slider('B', 0.03,3.02,0.05)
     D = st.sidebar.slider('D',0.00,0.89,0.50)
-    LoverB = st.sidebar.slider('L/B', 1.00,6.00,3.00)
+    LoverB = st.sidebar.slider('LoverB', 1.00,6.00,3.00)
     angle = st.sidebar.slider('angle', 31.95,45.70,33.00)
     unit_weight  = st.sidebar.slider('unit_weight', 9.85,20.80,20.60)
 
@@ -65,7 +65,7 @@ def get_input_features():
 
     data_user = {'B': B,
             'D': D,
-            'L/B': L/B,
+            'LoverB': LoverB,
             'angle': angle,
             'unit_weight': unit_weight,
 
