@@ -11,8 +11,8 @@ import streamlit as st
 from PIL import Image
 
 st.write("""
-# Concrete Compressive Strength Prediction
-This app predicts the **Unconfied Compressive Strength (UCS) of Geopolymer Stabilized Clayey Soil**!
+# Shallow foundation bearing capacity prediction
+This app predicts the **Ultimate Bearing Capacity of shallow foundation granular soil **!
 """)
 st.write('---')
 image=Image.open(r'foundation.jpg')
